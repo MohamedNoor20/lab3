@@ -27,12 +27,13 @@ public class RightAngledTriangle extends Shape {
     // overriding the parent class
     @Override
     public double area() {
-        return 0;
+        return 0.5 * base * height;
     }
 
     @Override
     public double perimeter() {
-        return 0;
+        double hypotenuse = Math.sqrt(base * base + height * height);
+        return base + height + hypotenuse;
     }
 
     @Override
