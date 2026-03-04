@@ -22,12 +22,12 @@ public class Circle extends Shape {
     // overriding the parent class
     @Override
     public double area() {
-        return 0;
+        return Math.PI * radius * radius;
     }
 
     @Override
     public double perimeter() {
-        return 0;
+        return 2 * Math.PI * radius;
     }
 
     @Override
