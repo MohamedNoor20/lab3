@@ -1,9 +1,42 @@
+// Mohamed Abdikadir Noor
+// 3141112
+
 package griffith;
 
-public class RightAngledTriangle {
+public class RightAngledTriangle extends Shape {
 
-	public RightAngledTriangle() {
-		// TODO Auto-generated constructor stub
-	}
+    private double base;
+    private double height;
+    // Constructor
+    public RightAngledTriangle(String name, double base, double height) {
+        super(name);
+        this.base = base;
+        this.height = height;
+    }
+    // Getter
+    public double getBase() {
+        return base;
+    }
+    // Getter
+    public double getHeight() {
+        return height;
+    }
 
+    // No setter because it is treated as immutable objects
+
+    // overriding the parent class
+    @Override
+    public double area() {
+        return 0;
+    }
+
+    @Override
+    public double perimeter() {
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Base: " + base + " Height: " + height;
+    }
 }
