@@ -27,12 +27,12 @@ public class Rhombus extends Shape {
     // overriding the parent class
     @Override
     public double area() {
-        return 0;
+        return side * height;
     }
 
     @Override
     public double perimeter() {
-        return 0;
+        return 4 * side;
     }
 
     @Override
