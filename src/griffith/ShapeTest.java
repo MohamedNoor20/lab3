@@ -49,5 +49,25 @@ class ShapeTest {
 	    Rhombus r = new Rhombus("Rhombus", 4, 3);
 	    assertTrue(r.toString().contains("Side: 4.0"));
 	}
+	
+	// TriangleArea
+	
+	@Test
+	public void testTriangleArea() {
+	    RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
+	    assertEquals(6, t.area(), 0.1);
+	}
+
+	@Test
+	public void testTrianglePerimeter() {
+	    RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
+	    assertEquals(12, t.perimeter(), 0.1);
+	}
+
+	@Test
+	public void testTriangleToString() {
+	    RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
+	    assertTrue(t.toString().contains("Base: 3.0"));
+	}
 
 }
