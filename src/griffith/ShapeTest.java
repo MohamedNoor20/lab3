@@ -5,6 +5,8 @@ package griffith;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 class ShapeTest {
@@ -68,6 +70,26 @@ class ShapeTest {
 	public void testTriangleToString() {
 	    RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
 	    assertTrue(t.toString().contains("Base: 3.0"));
+	}
+	
+	@Test
+	public void integrationTestShapesList() {
+
+	    ArrayList<Shape> shapes = new ArrayList<>();
+
+	    shapes.add(new Circle("Circle1", 3));
+	    shapes.add(new Circle("Circle2", 4));
+
+	    shapes.add(new Rhombus("Rhombus1", 4, 3));
+	    shapes.add(new Rhombus("Rhombus2", 5, 2));
+
+	    shapes.add(new RightAngledTriangle("Triangle1", 3, 4));
+	    shapes.add(new RightAngledTriangle("Triangle2", 5, 12));
+
+	    for (Shape s : shapes) {
+	        assertTrue(s.area() > 0);
+	        assertTrue(s.perimeter() > 0);
+	    }
 	}
 
 }
