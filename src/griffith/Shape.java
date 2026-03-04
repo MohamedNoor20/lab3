@@ -1,3 +1,6 @@
+// Mohamed Abdikadir Noor
+// 3141112
+
 package griffith;
 
 public abstract class Shape {
